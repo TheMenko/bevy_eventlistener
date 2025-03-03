@@ -1,3 +1,7 @@
+# 0.9.0
+
+- Updated to Bevy `0.15`
+
 # 0.8.1
 
 - Added the `E: EntityEvent` bound to `EventlistenerPlugin<E>`, to move compile errors from adding the plugin, to the event itself.

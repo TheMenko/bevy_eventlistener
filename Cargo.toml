@@ -6,7 +6,7 @@ resolver = "2"
 
 [package]
 name = "bevy_eventlistener"
-version = "0.8.1"
+version = "0.9.0"
 edition = "2021"
 description = "Event listeners and callbacks for bevy"
 license = "MIT OR Apache-2.0"
@@ -16,13 +16,13 @@ categories = ["game-engines", "rendering"]
 
 [dependencies]
 bevy_eventlistener_derive = { path = "macros", version = "0.8.0" }
-bevy_ecs = "0.14.0"
-bevy_app = "0.14.0"
-bevy_utils = "0.14.0"
-bevy_hierarchy = "0.14.0"
+bevy_ecs = "0.15"
+bevy_app = "0.15"
+bevy_utils = "0.15"
+bevy_hierarchy = "0.15"
 
 [dev-dependencies]
-bevy = { version = "0.14.0", default-features = false, features = [
+bevy = { version = "0.15", default-features = false, features = [
     "bevy_winit",
     "x11",
 ] }

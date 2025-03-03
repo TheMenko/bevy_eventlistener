@@ -46,11 +46,11 @@ impl<E: EntityEvent> On<E> {
         }
     }
 
-    /// Add a single [`Command`] any time this event listener is triggered. The command must
+    /// Queue a single [`Command`] any time this event listener is triggered. The command must
     /// implement `From<E>`.
     pub fn add_command<C: From<ListenerInput<E>> + Command + Send + Sync + 'static>() -> Self {
         Self::run(|event: Res<ListenerInput<E>>, mut commands: Commands| {
-            commands.add(C::from(event.to_owned()));
+            commands.queue(C::from(event.to_owned()));
         })
     }
 
